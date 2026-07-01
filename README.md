@@ -2,7 +2,7 @@
 
 A responsive drag-and-drop page builder built for Assignment 3 of the Frontend Developer Intern role. Users can compose a personal content page by adding, reordering, and customizing content blocks — with everything persisted automatically to localStorage.
 
-**Live Demo:** [your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)
+**Live Demo:** vercel.app( https://dynamic-content-builder-1x7bnwa30-shivamy022002-6795s-projects.vercel.app)
 **GitHub:** [github.com/codewith-Shivm/dynamic-content-builder](https://github.com/codewith-Shivm/dynamic-content-builder)
 
 ---
