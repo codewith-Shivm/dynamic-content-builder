@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300;
+  }
+  * { box-sizing: border-box; }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+  .dark .glass {
+    background: rgba(15,23,42,0.7);
+    border: 1px solid rgba(99,102,241,0.15);
+  }
+  .skeleton {
+    background: linear-gradient(90deg,#e2e8f0 25%,#f1f5f9 50%,#e2e8f0 75%);
+    background-size: 700px 100%;
+    animation: shimmer 1.6s infinite linear;
+  }
+  @keyframes shimmer {
+    0% { background-position: -700px 0; }
+    100% { background-position: 700px 0; }
+  }
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #c7d2fe; border-radius: 8px; }
+  .dark ::-webkit-scrollbar-thumb { background: #3730a3; }
+}
+
+/* Markdown preview styles */
+.markdown-preview h1 { @apply text-3xl font-bold mb-4 text-slate-900 dark:text-white; }
+.markdown-preview h2 { @apply text-2xl font-bold mb-3 text-slate-900 dark:text-white; }
+.markdown-preview h3 { @apply text-xl font-semibold mb-2 text-slate-900 dark:text-white; }
+.markdown-preview p  { @apply mb-3 text-slate-700 dark:text-slate-300 leading-relaxed; }
+.markdown-preview ul { @apply list-disc pl-5 mb-3 text-slate-700 dark:text-slate-300; }
+.markdown-preview ol { @apply list-decimal pl-5 mb-3 text-slate-700 dark:text-slate-300; }
+.markdown-preview code { @apply bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-sm font-mono text-primary-600 dark:text-primary-400; }
+.markdown-preview pre  { @apply bg-slate-100 dark:bg-slate-800 p-4 rounded-xl mb-3 overflow-auto; }
+.markdown-preview blockquote { @apply border-l-4 border-primary-400 pl-4 italic text-slate-600 dark:text-slate-400 mb-3; }
+.markdown-preview a { @apply text-primary-600 dark:text-primary-400 underline; }
+.markdown-preview strong { @apply font-bold; }
+.markdown-preview em { @apply italic; }
